@@ -276,7 +276,7 @@ int main(int argc, char* argv[])
 
     // Open libusb device
     if (device_handle == NULL) {
-        fprintf(stderr, "Couldn't open device.\n");
+        fprintf(stderr, "Couldn't open device %s.\n", hid_path);
         terminate_hid(&device_handle, &hid_path);
         return 1;
     }
